@@ -35,8 +35,12 @@ class Letter {
         noStroke();
         text(this.letter, this.x * scale, this.y * scale);
 
-        //noFill();
-        //stroke(255, 0, 0);
-        //this.bounds.show();    
+        noFill();
+        if (!this.selected) {
+            stroke(255, 0 ,0);
+        } else {
+            stroke(0, 255 ,0);
+        }  
+        this.bounds.show();    
     }
 }
