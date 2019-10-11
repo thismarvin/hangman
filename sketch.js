@@ -38,6 +38,10 @@ function reset() {
     }
 }
 
+function mousePressed() {
+    input();
+}
+
 function input() {
     if (lost || win) {
         reset();
