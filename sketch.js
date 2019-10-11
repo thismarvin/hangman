@@ -78,7 +78,7 @@ function verifyGuess(guess) {
 }
 
 function touchStarted() {
-    
+    mousePressed();
 }
 
 function draw() {
