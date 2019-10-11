@@ -145,9 +145,7 @@ function draw() {
         text("click anywhere to play again", 16 * scale, (topLeft + 24) * scale);
     }
 
-    textSize(8 * scale);
-    fill(255);
-    noStroke();
-    text(mouseX.toString(), 16 * scale, (topLeft + 24) * scale);
-    text(scale, 16 * scale, (topLeft + 32) * scale);
+    noFill();
+    stroke(255,0,0);
+    circle(mouseX, mouseY, 8 * scale);
 }
