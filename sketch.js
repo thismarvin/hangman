@@ -122,14 +122,10 @@ function draw() {
     for (let letter of letters) {
         letter.show();
     }
-
-    if (lost || win) {
-        textSize(8 * scale);
-        fill(255);
-        noStroke();
-        text("click anywhere to play again", 16 * scale, (topLeft + 24) * scale);
-    }
     
+    lost = incorrectGuesses >= 6;
+    win = correctGuesses === hiddenWord.length;
+
     if (lost) {
         fill(255, 0, 0);
         noStroke();
@@ -140,8 +136,12 @@ function draw() {
         noStroke();
         textSize(32 * scale);
         text(hiddenWord, 16 * scale, topLeft * scale);
-    }
+    }    
 
-    lost = incorrectGuesses >= 6;
-    win = correctGuesses === hiddenWord.length;
+    if (lost || win) {
+        textSize(8 * scale);
+        fill(255);
+        noStroke();
+        text("click anywhere to play again", 16 * scale, (topLeft + 24) * scale);
+    }
 }
