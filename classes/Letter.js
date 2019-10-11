@@ -4,7 +4,7 @@ class Letter {
         this.y = y;
         this.bounds = new Rectangle(this.x, this.y - 28, 18, 28);
         this.letter = String.fromCharCode(charCode);
-        this.selected = false;
+        this.selected = false;        
     }
 
     reset() {
@@ -42,5 +42,9 @@ class Letter {
             stroke(0, 255 ,0);
         }  
         this.bounds.show();    
+
+        stroke(0, 255, 0);
+        let test = new Rectangle(mouseX / scale, mouseY / scale, 1 * scale, 1 * scale);
+        test.show();
     }
 }
