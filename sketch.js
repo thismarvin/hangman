@@ -6,9 +6,11 @@ let correctGuesses;
 let lost;
 let win;
 
+let bruh;
+
 function setup() {
     initialize();
-
+    bruh = 50;
     hiddenWord = getRandomWord();
     letters = [];
     lettersGuessed = [];
@@ -49,6 +51,8 @@ function mousePressed() {
             verifyGuess(result);
         }
     }
+
+    bruh = random() * 266;
 }
 
 function verifyGuess(guess) {
@@ -74,7 +78,7 @@ function verifyGuess(guess) {
 }
 
 function draw() {
-    background(50);
+    background(bruh, 100, 50);
 
     // Setup font.
     textFont("Roboto Mono");
