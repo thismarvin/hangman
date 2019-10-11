@@ -1,15 +1,24 @@
+let scale;
+let canvasWidth;
+let canvasHeight;
+
+function initialize() {    
+    smartResize();
+}
 
 function smartResize(paddingPerctange=0.1) {
     let usable = 1 - paddingPerctange;
-    let finalWidth = windowWidth * usable;
-    let finalHeight = finalWidth * 9 / 16;
+    canvasWidth = windowWidth * usable;
+    canvasHeight = canvasWidth * 9 / 16;
 
-    if (finalHeight > windowHeight * usable) {        
-        finalHeight = windowHeight * usable;
-        finalWidth = finalHeight * 16 / 9;
+    if (canvasHeight > windowHeight * usable) {        
+        canvasHeight = windowHeight * usable;
+        canvasWidth = canvasHeight * 16 / 9;
     }
+
+    scale = canvasWidth / 320;
     
-    createCanvas(finalWidth, finalHeight);
+    createCanvas(canvasWidth, canvasHeight);
 }
 
 function windowResized() {
