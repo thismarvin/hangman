@@ -77,6 +77,10 @@ function verifyGuess(guess) {
     }
 }
 
+function touchStarted() {
+    
+}
+
 function draw() {
     background(bruh, 100, 50);
 
