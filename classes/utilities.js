@@ -1,4 +1,5 @@
 let scale;
+let canvas;
 let canvasWidth;
 let canvasHeight;
 
@@ -18,7 +19,7 @@ function smartResize(paddingPerctange=0.1) {
 
     scale = canvasWidth / 320;
     
-    createCanvas(canvasWidth, canvasHeight);
+    canvas = createCanvas(canvasWidth, canvasHeight);
 }
 
 function windowResized() {

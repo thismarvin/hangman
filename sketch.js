@@ -23,6 +23,8 @@ function setup() {
     for (let i = 0; i < 12; i++) {
         letters.push(new Letter(16 + 20 * i, 128 + 32, 65 + 14 + i));
     }
+
+    canvas.touchEnded(input);
 }
 
 function reset() {
@@ -36,7 +38,7 @@ function reset() {
     }
 }
 
-function mousePressed() {
+function input() {
     if (lost || win) {
         reset();
         return;
@@ -49,8 +51,6 @@ function mousePressed() {
             verifyGuess(result);
         }
     }
-
-    runOnce = false;
 }
 
 function verifyGuess(guess) {
@@ -73,10 +73,6 @@ function verifyGuess(guess) {
             }
         }
     }
-}
-
-function touchStarted() {
-    
 }
 
 function draw() {
