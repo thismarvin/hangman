@@ -35,16 +35,16 @@ class Letter {
         noStroke();
         text(this.letter, this.x * scale, this.y * scale);
 
-        noFill();
-        if (!this.selected) {
-            stroke(255, 0 ,0);
-        } else {
-            stroke(0, 255 ,0);
-        }  
-        this.bounds.show();    
+        //noFill();
+        //if (!this.selected) {
+        //    stroke(255, 0 ,0);
+        //} else {
+        //    stroke(0, 255 ,0);
+        //}  
+        //this.bounds.show();    
 
-        stroke(0, 255, 0);
-        let test = new Rectangle(mouseX / scale, mouseY / scale, 1 * scale, 1 * scale);
-        test.show();
+        //stroke(0, 255, 0);
+        //let test = new Rectangle(mouseX / scale, mouseY / scale, 1 * scale, 1 * scale);
+        //test.show();
     }
 }
