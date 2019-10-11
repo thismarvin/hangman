@@ -138,10 +138,16 @@ function draw() {
         text(hiddenWord, 16 * scale, topLeft * scale);
     }    
 
-    if (lost || win) {
-        textSize(8 * scale);
+    if (lost || win) {        
         fill(255);
         noStroke();
+        textSize(8 * scale);
         text("click anywhere to play again", 16 * scale, (topLeft + 24) * scale);
     }
+
+    textSize(8 * scale);
+    fill(255);
+    noStroke();
+    text(mouseX.toString(), 16 * scale, (topLeft + 24) * scale);
+    text(scale, 16 * scale, (topLeft + 32) * scale);
 }
